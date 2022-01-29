@@ -1,6 +1,4 @@
 import os
-
-import pandas as pd
 import streamlit.components.v1 as components
 from json import loads
 
@@ -26,7 +24,7 @@ if not _RELEASE:
         # We give the component a simple, descriptive name ("my_component"
         # does not fit this bill, so please choose something better for your
         # own component :)
-        "plotly_events",
+        "scattermap_events",
         # Pass `url` here to tell Streamlit that the component will be served
         # by the local dev server that you run via `npm run start`.
         # (This is useful while your component is in development.)
@@ -56,7 +54,7 @@ def plotly_mapbox_events(
     override_width="100%",
     key=None,
 ):
-    """Create a new instance of "plotly_events".
+    """Create a new instance of "plotly_mapbox_events".
 
     Parameters
     ----------
@@ -68,6 +66,8 @@ def plotly_mapbox_events(
         Watch for select events on plot and return point data when triggered
     hover_event: boolean, default: False
         Watch for hover events on plot and return point data when triggered
+    relayout_event: boolean, default: False
+        Watch for relayout events and returns the raw data and lat,lon,zoom
     override_height: int, default: 450
         Integer to override component height.  Defaults to 450 (px)
     override_width: string, default: '100%'
@@ -79,22 +79,40 @@ def plotly_mapbox_events(
 
     Returns
     -------
-    list of dict
-        List of dictionaries containing point details (in case multiple overlapping
-        points have been clicked).
+    tuple consisting of list or dictionary
+
+        events will be returned ordered
+            1. Click Event
+            2. Select Event
+            3. Hover Event
+            4. Relayout Event
+
+        For selected, click and hoverevents:
+        List of dictionaries containing marker details (in case multiple overlapping
+        marker have been clicked/selected/hovereed).
 
         Details can be found here:
             https://plotly.com/javascript/plotlyjs-events/#event-data
 
         Format of dict:
             {
-                x: int (x value of point),
-                y: int (y value of point),
-                curveNumber: (index of curve),
+                lat: int (lat value of point),
+                lon: int (lon value of point),
                 pointNumber: (index of selected point),
                 pointIndex: (index of selected point)
             }
 
+        For relayout event
+
+        Only a dictionary will be returned
+
+        Format of dict:
+            {
+                raw: containing the raw information about the relayout event
+                lat: new lat position
+                lon: new lon position
+                zoom: new zoom level
+            }
     """
     # kwargs will be exposed to frontend in "args"
     component_value = _component_func(
@@ -121,6 +139,7 @@ def plotly_mapbox_events(
 if not _RELEASE:
     import streamlit as st
     import plotly.express as px
+    import pandas as pd
 
     st.set_page_config(layout="wide")
 
