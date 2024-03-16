@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+streamlit-plotly-mapbox-events/streamlit_plotly_mapboxEvents.egg-info/PKG-INFO
+streamlit-plotly-mapbox-events/streamlit_plotly_mapboxEvents.egg-info/SOURCES.txt
+streamlit-plotly-mapbox-events/streamlit_plotly_mapboxEvents.egg-info/dependency_links.txt
+streamlit-plotly-mapbox-events/streamlit_plotly_mapboxEvents.egg-info/requires.txt
+streamlit-plotly-mapbox-events/streamlit_plotly_mapboxEvents.egg-info/top_level.txt
