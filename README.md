@@ -1,8 +1,9 @@
 # Streamlit Plotly MapBox Events
 
 
-![Example Image](https://github.com/reyemb/streamlit-plotly-mapbox-events/blob/main/example.gif)
 
+![Example Image](https://github.com/reyemb/streamlit-plotly-mapbox-events/blob/main/example.gif)
+=======
 
 ## First things first
 
@@ -15,12 +16,15 @@ Since it didn't cover scattermaps in a way I need. I decided to reuse her reposi
 Install via Pip!
 
 ```pip install streamlit-plotly-mapbox-events```
+=======
+
 
 ### Usage
 
 Import the component, and use it like any other Streamlit custom component!
 ```python
 import streamlit as st
+
 from streamlit_plotly_mapbox_events import plotly_mapbox_events
 import plotly.express as px
 import pandas as pd
@@ -95,3 +99,5 @@ Currently, a number of plotly events can be enabled.  They can be enabled/disabl
 
 ## Deprecation Warning
 The relayout_event parameter is deprecated and will have no effect. Relayout events have been removed due to interferences with Streamlit.
+=======
+
