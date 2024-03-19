@@ -1,1 +1,1 @@
-recursive-include my_component/frontend/build *
+recursive-include src/streamlit_plotly_mapbox_events/frontend/build *

@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/streamlit_plotly_mapbox_events/__init__.py
+src/streamlit_plotly_mapbox_events.egg-info/PKG-INFO
+src/streamlit_plotly_mapbox_events.egg-info/SOURCES.txt
+src/streamlit_plotly_mapbox_events.egg-info/dependency_links.txt
+src/streamlit_plotly_mapbox_events.egg-info/requires.txt
+src/streamlit_plotly_mapbox_events.egg-info/top_level.txt
+src/streamlit_plotly_mapbox_events/frontend/build/asset-manifest.json
+src/streamlit_plotly_mapbox_events/frontend/build/bootstrap.min.css
+src/streamlit_plotly_mapbox_events/frontend/build/index.html
+src/streamlit_plotly_mapbox_events/frontend/build/static/js/main.4dc6af59.js
+src/streamlit_plotly_mapbox_events/frontend/build/static/js/main.4dc6af59.js.LICENSE.txt
+src/streamlit_plotly_mapbox_events/frontend/build/static/js/main.4dc6af59.js.map

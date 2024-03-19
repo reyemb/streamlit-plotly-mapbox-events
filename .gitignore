@@ -4,3 +4,6 @@ venv/
 */node_modules/
 */.venv/
 */venv/
+.token
+vtest
+vtest/
