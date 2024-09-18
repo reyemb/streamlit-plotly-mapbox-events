@@ -1,5 +1,7 @@
 # Streamlit Plotly MapBox Events
 
+![PyPI](https://img.shields.io/pypi/v/streamlit-plotly-mapbox-events)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/streamlit-plotly-mapbox-events)
 
 
 ![Example Image](https://github.com/reyemb/streamlit-plotly-mapbox-events/blob/main/example.gif)
