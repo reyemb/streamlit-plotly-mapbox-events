@@ -36,7 +36,7 @@ df = pd.DataFrame({
 })
 
 # Create mapbox figure
-fig = px.scatter_mapbox(
+fig = px.scatter_map(
     df, 
     lat="lat", 
     lon="lon", 
