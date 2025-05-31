@@ -11,13 +11,6 @@ interface State {
   isFocused: boolean
 }
 
-interface layout {
-  raw: object,
-  lat: number,
-  lon: number,
-  zoom: number,
-}
-
 /**
  * This is a React-based component template. The `render()` function is called
  * automatically when your component should be re-rendered.
@@ -40,21 +33,14 @@ class MyComponent extends StreamlitComponentBase<State> {
 
   public render = (): ReactNode => {
     const plot_obj = JSON.parse(this.props.args["plot_obj"]);
-    const override_height = this.props.args["override_height"];
     const override_width = this.props.args["override_width"];
 
     // Event booleans
     const click_event = this.props.args["click_event"];
     const select_event = this.props.args["select_event"];
     const hover_event = this.props.args["hover_event"];
-    const relayout_event = this.props.args["relayout_event"];
 
     this.sendData()
-    console.log("hi")
-    console.log(this.props.args)
-    // Arguments that are passed to the plugin in Python are accessible
-    // via `this.props.args`. Here, we access the "name" arg.
-    const name = this.props.args["name"]
 
     // Streamlit sends us a theme object via props that we can use to ensure
     // that our component has visuals that match the active theme in a
@@ -87,11 +73,12 @@ class MyComponent extends StreamlitComponentBase<State> {
         onClick={click_event ? this.plotlyClickHandler : function() { }}
         onSelected={select_event ? this.plotlySelectHandler : function() { }}
         onHover={hover_event ? this.plotlyHoverHandler : function() { }}
-        style={{ width: override_width, height: this.props.args.override_height }}
+        style={{ width: override_width, height: this.props.args["override_height"] }}
         className="stPlotlyChart"
       />
     )
   }
+
   private sendData() {
     const returnArr: Array<any> = []
     const arrayOfInterest: Array<any> = [
@@ -107,18 +94,22 @@ class MyComponent extends StreamlitComponentBase<State> {
     });
     Streamlit.setComponentValue(JSON.stringify(returnArr))
   }
+
   private plotlyClickHandler = (data: any) => {
     this.clickedElements = this.plotlyMarkerHandler(data)
     this.sendData()
   }
+
   private plotlySelectHandler = (data: any) => {
     this.selectedElements = this.plotlyMarkerHandler(data)
     this.sendData()
-  }  
+  }
+
   private plotlyHoverHandler = (data: any) => {
     this.hoveredElements = this.plotlyMarkerHandler(data)
     this.sendData()
   }
+
   private plotlyMarkerHandler = (data: any) => {
     // Build array of points to return
     var marker: Array<any> = [];
@@ -132,6 +123,7 @@ class MyComponent extends StreamlitComponentBase<State> {
     });
     return marker
   }
+
   /** Focus handler for our "Click Me!" button. */
   private _onFocus = (): void => {
     this.setState({ isFocused: true })

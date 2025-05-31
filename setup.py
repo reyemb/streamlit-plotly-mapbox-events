@@ -8,7 +8,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="streamlit_plotly_mapbox_events",
-    version="0.1.2",
+    version="0.2.1",
     author="Reyemb",
     author_email="info@reyemb.io",
     description="A Streamlit component that integrates Plotly's interactive Mapbox visualizations, enabling bidirectional communication between the map and Streamlit. It allows for seamless rendering of Mapbox plots within Streamlit applications while supporting event handling, such as click, select, hover, and relayout events, to facilitate dynamic interactions and data updates.",
@@ -20,7 +20,7 @@ setuptools.setup(
     classifiers=[],
     python_requires=">=3.6",
     install_requires=[
-        "streamlit >= 0.63",
-        "plotly >= 4.14.3",
+        "streamlit >= 1.45.0",
+        "plotly >=  6.1.2",
     ],
 )

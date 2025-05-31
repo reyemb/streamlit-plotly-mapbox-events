@@ -1,18 +1,31 @@
-Metadata-Version: 2.1
-Name: streamlit-plotly-mapbox-events
-Version: 0.1.2
+Metadata-Version: 2.4
+Name: streamlit_plotly_mapbox_events
+Version: 0.2.1
 Summary: A Streamlit component that integrates Plotly's interactive Mapbox visualizations, enabling bidirectional communication between the map and Streamlit. It allows for seamless rendering of Mapbox plots within Streamlit applications while supporting event handling, such as click, select, hover, and relayout events, to facilitate dynamic interactions and data updates.
 Author: Reyemb
 Author-email: info@reyemb.io
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
+Requires-Dist: streamlit>=1.45.0
+Requires-Dist: plotly>=6.1.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
 
 # Streamlit Plotly MapBox Events
 
+![PyPI](https://img.shields.io/pypi/v/streamlit-plotly-mapbox-events)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/streamlit-plotly-mapbox-events)
+
 
 ![Example Image](https://github.com/reyemb/streamlit-plotly-mapbox-events/blob/main/example.gif)
-
+=======
 
 ## First things first
 
@@ -25,12 +38,15 @@ Since it didn't cover scattermaps in a way I need. I decided to reuse her reposi
 Install via Pip!
 
 ```pip install streamlit-plotly-mapbox-events```
+=======
+
 
 ### Usage
 
 Import the component, and use it like any other Streamlit custom component!
 ```python
 import streamlit as st
+
 from streamlit_plotly_mapbox_events import plotly_mapbox_events
 import plotly.express as px
 import pandas as pd
@@ -105,3 +121,5 @@ Currently, a number of plotly events can be enabled.  They can be enabled/disabl
 
 ## Deprecation Warning
 The relayout_event parameter is deprecated and will have no effect. Relayout events have been removed due to interferences with Streamlit.
+=======
+

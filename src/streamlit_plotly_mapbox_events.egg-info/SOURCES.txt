@@ -11,6 +11,6 @@ src/streamlit_plotly_mapbox_events.egg-info/top_level.txt
 src/streamlit_plotly_mapbox_events/frontend/build/asset-manifest.json
 src/streamlit_plotly_mapbox_events/frontend/build/bootstrap.min.css
 src/streamlit_plotly_mapbox_events/frontend/build/index.html
-src/streamlit_plotly_mapbox_events/frontend/build/static/js/main.4dc6af59.js
-src/streamlit_plotly_mapbox_events/frontend/build/static/js/main.4dc6af59.js.LICENSE.txt
-src/streamlit_plotly_mapbox_events/frontend/build/static/js/main.4dc6af59.js.map
+src/streamlit_plotly_mapbox_events/frontend/build/static/js/main.18dc042f.js
+src/streamlit_plotly_mapbox_events/frontend/build/static/js/main.18dc042f.js.LICENSE.txt
+src/streamlit_plotly_mapbox_events/frontend/build/static/js/main.18dc042f.js.map

@@ -148,7 +148,7 @@ if not _RELEASE:
     import streamlit as st
     import plotly.express as px
     import pandas as pd
-    
+
     st.set_page_config(layout="wide")
 
     if 'Plotly Mapbox' not in st.session_state:
@@ -161,7 +161,7 @@ if not _RELEASE:
                     {0: 3, 1: 2, 2: 1, 3: 5, 4: 3, 5: 2, 6: 5, 7: 2, 8: 2}})
 
 
-        mapbox = px.scatter_mapbox(df, lat="lat", lon="lon", hover_name="hover", zoom=5.5, height=600)
+        mapbox = px.scatter_map(df, lat="lat", lon="lon", hover_name="hover", zoom=5.5, height=600)
 
         mapbox.update_layout(mapbox_style="carto-positron")
         mapbox.update_layout(margin={"r":0, "t":0, "l":0, "b":0})
